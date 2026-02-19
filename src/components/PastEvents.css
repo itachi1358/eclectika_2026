@@ -1,0 +1,64 @@
+.card-container2 {
+    display: flex;
+    height: 450px; /* Allow for flexible height based on content */
+    justify-content: space-around; /* Adjust card positioning */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    overflow: hidden; /* Prevent cards from overflowing outside the container */
+  }
+  
+  /* Title styling */
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 900px) {
+    .card-container2 {
+      gap: 8px; /* Slightly reduce gap for smaller screens */
+      flex-direction: column; /* Stack the cards vertically */
+      justify-content: center;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+  
+    .card {
+      width: 100%; /* Take full width of the container */
+      max-width: 350px; /* Optional: max width to prevent excessively wide cards */
+      min-height: 250px; /* Adjust card height */
+      margin: 10px 0; /* Ensure proper spacing between cards */
+    }
+  
+    .card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: rgba(215, 221, 250, 0.444);
+      font-size: 1.5rem; /* Adjust font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-container2 {
+      height: auto; /* Adjust height to allow for wrapping */
+      flex-direction: column;
+      gap: 10px; /* Adjust gap for mobile */
+    }
+  
+    .card {
+      width: 100%; /* Full width for mobile screens */
+      height: 250px; /* Adjust card height for mobile */
+      margin-bottom: 10px; /* Provide spacing between cards */
+    }
+  
+    .content {
+      font-size: 1.2rem; /* Adjust font size further for mobile */
+    }
+  }
+  

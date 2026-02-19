@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+  import { BrowserRouter, Routes, Route } from "react-router-dom";
+  import { useEffect, useRef } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  import First from "./components/First";
+  import Intro from "./components/Intro";
+  import Landing from "./components/Landing";
+  import About_Page from "./pages/About_Page";
+  import Team_Page from "./pages/Team/Team_Page";
+  import "./App.css"; // or wherever your sphere CSS lives
+  import OurTheme from "./components/OurTheme";
+import Merch from "./Merch/Merch";
 
-export default App;
+  function App() {
+    const sphereRef = useRef(null);
+
+    useEffect(() => {
+      const handleMouseMove = (e) => {
+        if (sphereRef.current) {
+          sphereRef.current.style.left = `${e.clientX}px`;
+          sphereRef.current.style.top = `${e.clientY}px`;
+        }
+      };
+
+      window.addEventListener("mousemove", handleMouseMove);
+
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+    }, []);
+
+    return (
+      <BrowserRouter>
+        {/* GLOBAL CURSOR SPHERE */}
+        {/* <div className="sphere" ref={sphereRef}></div> */}
+
+        <Routes>
+          <Route path="/" element={<First />} />
+          <Route path="/intro" element={<Intro />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/About" element={<About_Page/>}/>
+          <Route path="/Team" element={<Team_Page/>}/>
+          <Route path="/Merch" element={<Merch/>}/>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+
+  export default App;

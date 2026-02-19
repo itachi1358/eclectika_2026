@@ -1,0 +1,45 @@
+/* General Styles */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Sponsor Section */
+  .sponsors {
+    display: flex;
+    justify-content: center; /* Center the content */
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 10px;
+    margin-bottom: 4%;
+  }
+  
+  .spons-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  .sponsors img {
+    width: 200px; /* Slightly larger for better visibility */
+    height: 200px;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sponsors img:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .sponsors img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  

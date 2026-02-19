@@ -1,0 +1,109 @@
+/* Wrapper for scroll breathing space */
+.about-wrapper {
+  width: 100%;
+  padding: 10vh 0;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Glass Card */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: white;
+
+  width: min(1400px, 90vw);
+  margin-top: 12%;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 58px;
+  padding: 40px;
+  box-sizing: border-box;
+
+  /* 🔥 Glass / Ice Effect */
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+
+  /* For GSAP smoothness */
+  will-change: transform, opacity;
+
+  transition: all 0.6s ease;
+}
+
+.about-section:hover {
+  border: 2px solid rgba(180, 180, 255, 0.8);
+  box-shadow: 
+    0 0 15px rgba(180, 180, 255, 0.6),
+    0 0 30px rgba(180, 180, 255, 0.4),
+    0 0 60px rgba(180, 180, 255, 0.2);
+}
+/* Text Container */
+.about-section-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-section-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Logo */
+.logo {
+  background-image: url('../assets/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  flex: 1;
+  min-width: 240px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .about-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-section-content p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    height: 150px;
+    width: 100px;
+  }
+
+  .about-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section-content p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,144 @@
+.about_body {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e0e2ff;
+  overflow-x: hidden;
+}
+.about_body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("../assets/wallpaper.png") center / cover no-repeat;
+  z-index: -1;
+}
+
+.about_container {
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title */
+.about_title {
+  font-family: "HarryP", serif;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: #dcdfff;
+  animation: glowPulse 3s ease-in-out infinite alternate;
+
+  text-shadow:
+    0 0 10px rgba(199,201,255,0.8),
+    0 0 25px rgba(138,124,255,0.6),
+    0 0 50px rgba(138,124,255,0.4);
+}
+
+
+/* Paragraphs */
+.about_text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+/* Highlight line */
+.about_highlight {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.9),
+    0 0 25px rgba(200,200,255,0.7),
+    0 0 45px rgba(138,124,255,0.5);
+}
+
+.faculty_section {
+  margin-top: 4rem;
+  padding: 2rem;
+  max-width: 800px;
+  text-align: center;
+  background: rgba(10, 10, 30, 0.6);
+  border: 1px solid rgba(138, 124, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.faculty_title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.faculty_name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.8),
+    0 0 20px rgba(138,124,255,0.6);
+}
+
+.faculty_desc {
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.back_btn {
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  border: 1px solid rgba(138,124,255,0.5);
+  color: #c7c9ff;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.back_btn:hover {
+  background: rgba(138,124,255,0.2);
+  transform: translateY(-2px);
+}
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 10px rgba(199,201,255,0.8),
+      0 0 25px rgba(138,124,255,0.6);
+  }
+  to {
+    text-shadow:
+      0 0 20px rgba(199,201,255,1),
+      0 0 45px rgba(138,124,255,0.8);
+  }
+}
+
+.lumos-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(225, 220, 255, 0.282) 0%,
+    rgba(205, 200, 255, 0.253) 30%,
+    rgba(137, 124, 255, 0.175) 60%,
+    transparent 80%
+  );
+
+  mix-blend-mode: screen;
+}

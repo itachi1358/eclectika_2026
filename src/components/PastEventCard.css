@@ -1,0 +1,109 @@
+.card {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 180px;
+    transition: all ease 0.8s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 60%;
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: none;
+    height: max-content;
+    transition: all 1s ease;
+  }
+  
+  .card:hover {
+    opacity: 100%;
+    width: 500px;
+    height: 450px;
+  }
+  
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover .content {
+    display: flex;
+    filter: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2px;
+    background: radial-gradient(rgba(46, 46, 46, 0.563), rgba(0, 0, 0, 0.31));
+    margin-top: 4%;
+    color: rgb(234, 234, 234);
+    animation: fadeSlideUp 0.5s ease-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .card {
+      width: 300px; /* Adjust card width on smaller screens */
+      height: 250px;
+
+    }
+  
+    .card:hover {
+      width: 350px;
+      height: 300px;
+    }
+  
+    .card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: rgba(215, 221, 250, 0.444);
+      font-size: 1.5rem; /* Slightly smaller font size on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      opacity: 100%;
+      width: 300px;
+      max-height: 0px;
+    }
+  
+    .content {
+        display: flex;
+        filter: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 2px;
+        background: radial-gradient(rgba(46, 46, 46, 0.563), rgba(0, 0, 0, 0.31));
+        margin-top: 4%;
+        color: rgb(234, 234, 234);
+        animation: fadeSlideUp 0.5s ease-out;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.2rem;
+    }
+  }
+  

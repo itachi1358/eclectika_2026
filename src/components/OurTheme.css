@@ -1,0 +1,61 @@
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    position: relative; /* Ensure natural positioning */
+    margin-top: 10%; /* Adds space above and below the section */
+    margin-right: -4%;
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+    color: #ffffff; /* Text color for better readability */
+    padding: 20px 5%; /* Add internal spacing for better structure */
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+  
+  .about-section-text {
+    margin-right: 0px; 
+  }
+  
+  .about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-section-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify; /* Better alignment for longer paragraphs */
+  }
+  
+  /* Logo Container */
+  .logo1{
+    background-image: url('../assets/logo1.png'); /* Ensure correct path */
+    background-size: contain; /* Scale the image proportionally */
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    background-position:15%;
+    flex: 0.8; /* Allow the logo to take equal space */
+    margin-top: 20px; /* Optiona  l: Adjust spacing */
+  }
+  @media screen and (max-width: 480px) {
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  
+    .logo1 {
+      height: 150px; 
+      width: 100px;
+    }
+  
+    .about-section h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .about-section-content p {
+      font-size: 0.9rem;
+    }
+  }

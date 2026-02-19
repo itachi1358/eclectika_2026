@@ -1,0 +1,133 @@
+/* Container */
+.card-container {
+  perspective: 1200px;
+}
+
+/* Card Base */
+.card1 {
+  width: 260px;
+  height: 380px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card1:hover {
+  transform: rotateY(180deg);
+}
+
+/* Glow Aura */
+.card1::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2b85c6, #0056a6, #f5d742);
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.card1:hover::before {
+  opacity: 1;
+}
+
+/* Shared face styles */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* --- FRONT SIDE IMPROVEMENTS --- */
+
+.card-front {
+  padding: 0; /* Removed padding for full-bleed image */
+  display: block;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers whole area without stretching */
+  display: block;
+}
+
+/* The Transparent Blurred Box */
+.name-sub-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(0, 0, 0, 0.3); /* Transparent dark base */
+  backdrop-filter: blur(12px); /* The frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* --- Typography --- */
+.name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  margin: 0;
+  color: #f5d742;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.sub-name {
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* --- BACK SIDE (STRICTLY UNCHANGED) --- */
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.branch {
+  color: #c9b037;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5d742;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.icon:hover {
+  background: rgba(0, 4, 255, 0.3);
+  box-shadow: 0 0 15px rgba(25, 0, 255, 0.8);
+  transform: scale(1.15);
+}

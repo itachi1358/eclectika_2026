@@ -1,0 +1,101 @@
+.complete_page {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, rgba(69, 66, 254, 0.186), transparent 60%),
+        linear-gradient(135deg, #0b0b0b, #000);
+    background-position: center;
+    position: sticky;
+}
+
+.complete{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, #353535, #000000);
+    background-position: center;
+    position: sticky;
+}
+.main{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+.card-containery{
+    display: flex;
+    justify-content: center;
+    gap:58px;
+    margin-top: 4%;
+    flex-wrap: wrap;
+}
+
+.heads{
+    margin-top: 8%;
+}
+.core-container{
+    display: flex;
+    justify-content: center;
+    gap:58px;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+/* Keyframe for fade-in and slide-up animation */
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling for the text */
+  .animated-text {
+    margin-top: 3%;
+    font-size: 3rem; /* Adjust size as needed */
+    color: #ffffff; /* Choose a color that matches your theme */
+    text-align: center;
+    animation: fadeSlideUp 1s ease-out; /* Duration and easing */
+  }
+  
+/* Background canvas */
+.squares-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Foreground content */
+.team_content {
+    position: relative;
+    z-index: 1;
+}
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  padding: 10px 20px;
+  border-radius: 30px;
+
+  background: rgba(0, 200, 255, 0.15);
+  border: 1px solid rgba(0, 200, 255, 0.5);
+  color: #a8f0ff;
+
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.back-button:hover {
+  background: rgba(0, 200, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
