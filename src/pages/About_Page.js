@@ -102,7 +102,7 @@ useEffect(() => {
     <h2 className="section_title">Faculty Advisor</h2>
     <p className="faculty_name">Dr. Suvendu Rup</p>
     <p className="faculty_desc">
-      Dr. Lata has been the guiding force behind Eclectika, mentoring the
+      Dr. Suvendu Rup Sir has been the guiding force behind Eclectika, mentoring the
       organizing team and ensuring that creativity is balanced with discipline
       and excellence. Her leadership and vision continue to shape the festival
       into a platform of inspiration and impact.
