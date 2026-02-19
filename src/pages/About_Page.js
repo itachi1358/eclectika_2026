@@ -100,7 +100,7 @@ useEffect(() => {
   {/* Faculty Advisor */}
   <div className="faculty_section">
     <h2 className="section_title">Faculty Advisor</h2>
-    <p className="faculty_name">Dr. Lata</p>
+    <p className="faculty_name">Dr. Suvendu Rup</p>
     <p className="faculty_desc">
       Dr. Lata has been the guiding force behind Eclectika, mentoring the
       organizing team and ensuring that creativity is balanced with discipline
